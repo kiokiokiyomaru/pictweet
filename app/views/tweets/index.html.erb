@@ -1,0 +1,6 @@
+<div class="contents row" >
+  <% @tweets.each do |tweet| %>                              <!--|tweet|・・・変数tweetの定義はここで行われている-->
+    <%= render partial: "tweet", locals: { tweet: tweet } %>   <!--</div>   部分テンプレート「_tweet.html.erb」の呼び出し-->
+  <% end %> 
+  <%= paginate(@tweets) %>
+</div>
